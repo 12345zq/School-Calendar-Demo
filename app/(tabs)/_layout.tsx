@@ -1,6 +1,6 @@
 import React from 'react';
 import { Tabs } from 'expo-router';
-import { Calendar, ListTodo } from 'lucide-react-native';
+import { Calendar, ListTodo, Camera } from 'lucide-react-native';
 
 export default function TabLayout() {
   return (
@@ -24,6 +24,15 @@ export default function TabLayout() {
           title: 'Homework',
           tabBarIcon: ({ size, color }) => (
             <ListTodo size={size} color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="camera"
+        options={{
+          title: 'Camera',
+          tabBarIcon: ({ size, color }) => (
+            <Camera size={size} color={color} />
           ),
         }}
       />
