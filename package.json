@@ -7,7 +7,13 @@
   "scripts": {
     "dev": "EXPO_NO_TELEMETRY=1 expo start",
     "build:web": "expo export --platform web",
-    "lint": "expo lint"
+    "lint": "expo lint",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "android:release": "expo run:android --variant release",
+    "android:build": "cd android && ./gradlew assembleRelease --no-daemon",
+    "android:bundle": "cd android && ./gradlew bundleRelease --no-daemon",
+    "android:clean": "cd android && ./gradlew clean --no-daemon"
   },
   "dependencies": {
     "@expo/vector-icons": "^14.0.2",
@@ -46,6 +52,7 @@
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@types/react": "~18.3.12",
+    "@types/react-native": "^0.72.8",
     "typescript": "^5.3.3"
   }
 }
